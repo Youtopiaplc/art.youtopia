@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Allow: /gallery
+Allow: /contact
+Disallow: /studio-private
+Sitemap: https://art.youtopiaplc.com/sitemap.xml

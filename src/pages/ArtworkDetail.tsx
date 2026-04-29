@@ -4,6 +4,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLeft, ArrowRight, Maximize2, X, ZoomIn, ZoomOut } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { type Artwork } from "@/data/artworks";
+import { Helmet } from "react-helmet-async";
+
+
 
 // Zoomable Image Component
 function ZoomableImage({ src, alt, onZoomRequest }: { src: string; alt: string; onZoomRequest: () => void }) {
@@ -203,6 +206,7 @@ function ZoomableImage({ src, alt, onZoomRequest }: { src: string; alt: string; 
 }
 
 export default function ArtworkDetail() {
+  
   const [, params] = useRoute("/gallery/:id");
   const [, setLocation] = useLocation();
   const { artworks } = useSiteContent();
@@ -213,6 +217,8 @@ export default function ArtworkDetail() {
 
   const artworkIndex = artworks.findIndex(a => a.id === params?.id);
   const artwork = artworks[artworkIndex];
+
+
 
   useEffect(() => {
     if (artwork) {
@@ -248,6 +254,12 @@ export default function ArtworkDetail() {
   };
 
   return (
+    <>
+    <Helmet>
+    <title>{artwork.title} | Mikiyas Assefa</title>
+    <meta name="description" content={artwork.description.substring(0, 150)} />
+    </Helmet>
+
     <div className="min-h-screen bg-background pt-32 pb-24">
       <div className="container mx-auto px-6 md:px-12">
         {/* Back Link */}
@@ -457,6 +469,7 @@ export default function ArtworkDetail() {
         )}
       </AnimatePresence>
     </div>
+  </>
   );
 }
 

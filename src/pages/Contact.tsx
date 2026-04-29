@@ -6,8 +6,11 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Mail, Phone } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 export default function Contact() {
+
+
   const { artist, artworks } = useSiteContent();
   const { toast } = useToast();
   
@@ -48,6 +51,11 @@ export default function Contact() {
   };
 
   return (
+    <>  <Helmet>
+  <title>Contact | Mikiyas Assefa</title>
+  <meta name="description" content="Inquire about artwork, commissions, or visit the studio in Addis Ababa, Ethiopia." />
+  </Helmet>
+  
     <div className="min-h-screen bg-background pt-32 pb-24">
       <div className="container mx-auto px-6 md:px-12">
         <header className="mb-20">
@@ -157,5 +165,6 @@ export default function Contact() {
         </div>
       </div>
     </div>
+  </>
   );
 }

@@ -150,6 +150,8 @@ export function useSiteContent() {
     setArtist(newArtist);
   };
 
+  const DEFAULT_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD;
+
   const verifyPassword = async (password: string): Promise<boolean> => {
     try {
       const { data, error } = await supabase
@@ -161,8 +163,8 @@ export function useSiteContent() {
       if (error || !data) {
         await supabase
           .from('admin_settings')
-          .upsert({ id: 1, password_hash: 'admin123' });
-        return password === 'admin123';
+          .upsert({ id: 1, password_hash: DEFAULT_PASSWORD });
+        return password === DEFAULT_PASSWORD;
       }
       
       return password === data.password_hash;

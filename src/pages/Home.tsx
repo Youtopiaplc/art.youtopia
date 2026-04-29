@@ -3,6 +3,7 @@ import { useSiteContent } from "@/hooks/useSiteContent";
 import { Link } from "wouter";
 import { ArtworkCard } from "@/components/ArtworkCard";
 import { artistImage } from "@/data/artworks";
+import { Helmet } from "react-helmet-async";
 
 export default function Home() {
   const { artist, artworks } = useSiteContent();
@@ -31,6 +32,11 @@ export default function Home() {
   };
 
   return (
+    <>
+  <Helmet>
+  <title>Mikiyas Assefa | Contemporary Artist</title>
+  <meta name="description" content="Ethiopian contemporary artist exploring identity, memory, and the human condition through acrylics and mixed media." />
+  </Helmet>
     <div className="min-h-screen bg-[#fdfcf0]">
       {/* Hero Section - Artist Profile Redesign */}
       <section className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden">
@@ -187,5 +193,6 @@ export default function Home() {
         </div>
       </section>
     </div>
+    </>
   );
 }

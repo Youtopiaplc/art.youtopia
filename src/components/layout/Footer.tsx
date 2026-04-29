@@ -4,12 +4,12 @@ import { Instagram, Facebook, Mail, Phone, MapPin } from "lucide-react";
 // UPDATE THESE WITH YOUR REAL INFORMATION
 // ============================================
 const SOCIAL_LINKS = {
-  instagram: "https://www.instagram.com/mikiasse12?igsh=MXFjNWZ2d3QydHF2MA%3D%3D&utm_source=qr",  // ← Change this
-  facebook: "https://www.facebook.com/YOUR_PAGE/",       // ← Change this
+  instagram: "https://www.instagram.com/mikiasse12?igsh=MXFjNWZ2d3QydHF2MA%3D%3D&utm_source=qr", 
+  facebook: "https://www.facebook.com/",      
 };
 
 const CONTACT_INFO = {
-  email: "mikiyas.assefa@example.com",
+  email: "mikiyas.assefa@gmail.com",
   phone: "+251920227210",
   location: "Addis Ababa, Ethiopia",
 };

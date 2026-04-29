@@ -11,7 +11,6 @@ import { type Artwork, type ArtistProfile } from "@/data/artworks";
 import { Trash2, Plus, Save } from "lucide-react";
 
 type DraftArtwork = Omit<Artwork, "number"> & { number?: number };
-
 const emptyNewArtwork: DraftArtwork = {
   id: "",
   title: "",
