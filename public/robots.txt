@@ -3,4 +3,4 @@ Allow: /
 Allow: /gallery
 Allow: /contact
 Disallow: /studio-private
-Sitemap: https://art.youtopiaplc.com/sitemap.xml
+Sitemap: https://arts.youtopia.et/sitemap.xml

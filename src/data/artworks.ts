@@ -23,6 +23,7 @@ export interface Artwork {
   status: ArtworkStatus;
   price: string;
   printEdition?: string;
+  print_edition?: string;
   secondaryImages?: string[];
 }
 

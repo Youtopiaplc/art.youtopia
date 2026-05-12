@@ -9,7 +9,7 @@ const SOCIAL_LINKS = {
 };
 
 const CONTACT_INFO = {
-  email: "mikiyas.assefa@gmail.com",
+  email: "mikiyasassefa1992@gmail.com",
   phone: "+251920227210",
   location: "Addis Ababa, Ethiopia",
 };

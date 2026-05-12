@@ -46,7 +46,11 @@ export function useSiteContent() {
     }
     
     if (data && data.length > 0) {
-      setArtworks(data as Artwork[]);
+      const mappedData = data.map(art => ({
+        ...art,
+        printEdition: art.print_edition,  
+      }));
+      setArtworks(mappedData as Artwork[]);
     } else {
       await seedArtworks();
     }
